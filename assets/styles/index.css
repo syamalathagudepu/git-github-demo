@@ -1,7 +1,6 @@
-.hero-header {
-
-    position: fixed;
-    width:100px;
-    right:0px;
-    top:20px;
+h1{
+    display:inline;
+}
+img{
+    display:block;
 }
