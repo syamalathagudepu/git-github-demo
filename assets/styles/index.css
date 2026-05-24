@@ -1,8 +1,7 @@
-/* Box model */
+.hero-header {
 
-#Hello {
-  
-    border: 10px green;
-    border-radius: 50px green;
-
+    position: fixed;
+    width:100px;
+    right:0px;
+    top:20px;
 }
