@@ -1,33 +1,33 @@
-// if the async function (executor) succeeds -> what we want the promise to do?
-// if the async function fails -> what we want the promise to do?
-let promise = new Promise((resolve, reject) => {
-    console.log('promise is initializing...');
+// setTimeout(() => {
+//     console.log("Happy New Year!");
+// }, 5000);
 
-    // logic for the executor, async function within the promise
-    console.log('async function executed!');
+// setTimeout(() => {
+//     console.log("Hello World!");
+// }, 3000);
 
-    // const data = [3, 4, 5, 6, 7];
 
-    const error = 'fetching data failed';
 
-    // after 3 seconds, let's resolve the async function
-    setTimeout(() => {
-        reject(error);
-    }, 3000);
-}); 
+function sayHello() {
+    console.log("inside sayHello function");
 
-promise
-    .then((data) => {
-            // success callback -> resolve argument
-            // onfullfilled
-            console.log('the promise is resolved');
-            console.log(data);
-        })
-    .catch((error) => {
-            // failure callback -> reject argument
-            // onrejected
-            console.log('the promise is rejected');
-            console.log('error:', error);
-        })
 
-        console.log(Promise);
+
+let sum=0
+
+let numb=1;
+
+while (numb<=5) {
+    sum = sum + numb;
+
+    numb++;
+}
+
+console.log("sum:", sum);
+
+}
+
+sayHello( );
+
+console.log("finished executing function sayHello");
+
