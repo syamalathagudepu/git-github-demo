@@ -1,10 +1,4 @@
-# DOM Manipulation
+Promise:
+--------
 
-## Topics
-
-[] DOM Selection
-[] Dynamic content Manipulation
-[] Event Handling
-
-### DOM
-
+A promise is an object that represents the eventual completion of an asynchronous operation and its resulting value.
