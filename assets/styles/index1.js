@@ -1,33 +1,42 @@
-// setTimeout(() => {
-//     console.log("Happy New Year!");
-// }, 5000);
+function first(callback) {
+    console.log("starting first...");
+// wait for 2 sec
 
-// setTimeout(() => {
-//     console.log("Hello World!");
-// }, 3000);
-
-
-
-function sayHello() {
-    console.log("inside sayHello function");
-
-
-
-let sum=0
-
-let numb=1;
-
-while (numb<=5) {
-    sum = sum + numb;
-
-    numb++;
-}
-
-console.log("sum:", sum);
+setTimeout(() => {
+console.log("ending first...")
+callback()
+}, 2000);
 
 }
 
-sayHello( );
+function second(callback) {
+    console.log("starting second...");
+// wait for 2 sec
 
-console.log("finished executing function sayHello");
+setTimeout(() => {
+console.log("ending second...")
+callback()
+}, 3000);
 
+}
+
+function third(callback) {
+    console.log("starting third...");
+// wait for 2 sec
+
+setTimeout((resolve) => {
+console.log("ending third...")
+callback(resolve)
+}, 5000);
+
+}
+
+first(() => {
+    second ( () => {
+        third ( ()=>{
+        console.log("finished executing all");
+
+        })
+    })
+
+})
