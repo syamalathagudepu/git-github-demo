@@ -38,8 +38,11 @@ resolve();
 })
 
 }
-
+async function executeFunctions() {
    await first();
    await second();
    await third();
    console.log("finished executing all functions")
+}
+
+executeFunctions();
