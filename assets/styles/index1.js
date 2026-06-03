@@ -5,7 +5,7 @@ function first() {
 
 setTimeout(() => {
 console.log("ending first...")
-resolve()
+resolve();
 }, 2000);
 
   })
@@ -13,9 +13,9 @@ resolve()
 }
 
 function second() {
-    new Promise((resolve)=>{
+   return new Promise((resolve)=>{
         console.log("starting second...");
-// wait for 2 sec
+// wait for 3 sec
 
 setTimeout(() => {
 console.log("ending second...")
@@ -26,9 +26,9 @@ resolve();
 }
 
 function third() {
-   new Promise((resolve)=> {
+  return new Promise((resolve)=> {
      console.log("starting third...");
-// wait for 2 sec
+// wait for 5 sec
 
 setTimeout(() => {
 console.log("ending third...")
@@ -39,9 +39,7 @@ resolve();
 
 }
 
-first()
-    .then(second)
-    .then(third)
-    .then(()=>{
-        console.log("finished executing all functions")
-    })
+   await first();
+   await second();
+   await third();
+   console.log("finished executing all functions")
